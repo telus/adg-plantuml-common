@@ -9,6 +9,53 @@
 !includeurl ARCHIMATECUSTOMICONURL/technology-artifact-module.puml
 !includeurl ARCHIMATECUSTOMICONURL/technology-node-weblogic.puml
 
+' TELUS extension styling
+skinparam rectangle<<behavior>> {
+  roundCorner 25
+}
+
+skinparam linetype ortho
+skinparam pathHoverColor red
+skinparam noteTextAlignment left
+skinparam sequenceArrowThickness 0.5
+
+left to right direction
+    
+sprite $aComponent jar:archimate/application-component
+sprite $aDataObject jar:archimate/application-data-object
+sprite $aInterface jar:archimate/application-interface
+sprite $tNetwork jar:archimate/technology-network
+sprite $tArtifact jar:archimate/technology-artifact
+sprite $tNode jar:archimate/technology-node
+sprite $tInfraInterface jar:archimate/technology-infra-interface
+sprite $bActor jar:archimate/business-actor
+
+skinparam defaultFontName Arial
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 0.5
+skinparam titleFontSize 30
+skinparam titleFontColor #4B286D
+skinparam footerFontSize 13
+skinparam svgLinkTarget _blank
+skinparam NoteBorderThickness 0 
+skinparam NoteBorderColor #ffffff
+
+<style>
+title {
+  padding 30 30 30 30
+}
+
+package {
+  LineColor #71757B
+  Color #4B286D
+}
+
+note {
+  BackgroundColor #ffffff
+  BorderColor #ffffff
+}
+</style>
+
 ' Styling
 ' ##################################
 !define TECHN_FONT_SIZE 12
@@ -156,13 +203,12 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define ApplicationModule(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
 !define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
-' No links to be generated for the following element types
-!define DataObject(e_alias, e_label) rectangle "e_label" <<$aDataObject>><<application-data-object>> as e_alias #Application
-!define Artifact(e_alias, e_label)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias #Technology
-!define Node(e_alias, e_label)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias #Technology
-!define Technology_Node_Weblogic(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias
-!define CommunicationNetwork(e_alias, e_label)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias #Technology
-!define BusinessActor(e_alias, e_label) archimate #BUSINESS "e_label" <<business-actor>> as e_alias
+!define DataObject(e_alias, e_label, e_link) rectangle "e_label" <<$aDataObject>><<application-data-object>> as e_alias [[e_link]] #Application
+!define Artifact(e_alias, e_label, e_link)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias [[e_link]] #Technology
+!define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias [[e_link]] #Technology
+!define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias [[e_link]] 
+!define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
+!define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bActor>><<business-actor>> as e_alias [[e_link]]
 
 
 'Strategy Elements
@@ -340,50 +386,3 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Rel_Influence_Down(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".DOWN.>")
 !define Rel_Influence_Left(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".LEFT.>")
 !define Rel_Influence_Right(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".RIGHT.>")
-
-' TELUS extension styling
-skinparam rectangle<<behavior>> {
-  roundCorner 25
-}
-
-skinparam linetype ortho
-skinparam pathHoverColor red
-skinparam noteTextAlignment left
-skinparam sequenceArrowThickness 0.5
-
-left to right direction
-    
-sprite $aComponent jar:archimate/application-component
-sprite $aDataObject jar:archimate/application-data-object
-sprite $aInterface jar:archimate/application-interface
-sprite $tNetwork jar:archimate/technology-network
-sprite $tArtifact jar:archimate/technology-artifact
-sprite $tNode jar:archimate/technology-node
-sprite $tInfraInterface jar:archimate/technology-infra-interface
-sprite $bActor jar:archimate/business-actor
-
-skinparam defaultFontName Arial
-skinparam titleBorderRoundCorner 15
-skinparam titleBorderThickness 0.5
-skinparam titleFontSize 30
-skinparam titleFontColor #4B286D
-skinparam footerFontSize 13
-skinparam svgLinkTarget _blank
-skinparam NoteBorderThickness 0 
-skinparam NoteBorderColor #ffffff
-
-<style>
-title {
-  padding 30 30 30 30
-}
-
-package {
-  LineColor #71757B
-  Color #4B286D
-}
-
-note {
-  BackgroundColor #ffffff
-  BorderColor #ffffff
-}
-</style>
