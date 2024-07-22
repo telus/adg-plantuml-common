@@ -10,7 +10,7 @@
 
 ' TELUS extension styling
 skinparam rectangle<<behavior>> {
-  roundCorner 25
+  roundCorner 0
 }
 
 skinparam linetype ortho
