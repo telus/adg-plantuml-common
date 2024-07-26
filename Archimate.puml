@@ -1,5 +1,6 @@
 ' Archimate-PlantUML
 ' 12/22/2023 - Updated to enable all ArchiMate elements and rename them to support TELUS metadata.  See https://docs.google.com/spreadsheets/d/1hHAGzGV0kXPZ9gyfa2rFEvY0EBOViG3wsp31FfbIRIY/edit#gid=652489814
+' 07/25/2024 - Changed Association arrow from `==` to `-\\`.  The arrow should be `-//` instead but a but is preventing the bottom half arrow type from displaying.  Issue opened with PlantUML: https://github.com/plantuml/plantuml/issues/1867
 
 ' Sprites
 !define ARCHIMATECUSTOMICONURL https://raw.githubusercontent.com/telus/adg-plantuml-common/master/icons/ArchiMate
@@ -341,17 +342,11 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Rel_Serving_Left(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-LEFT->")
 !define Rel_Serving_Right(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-RIGHT->")
 
-!define Rel_Association(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "==")
-!define Rel_Association_Up(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=UP=")
-!define Rel_Association_Down(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=DOWN=")
-!define Rel_Association_Left(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=LEFT=")
-!define Rel_Association_Right(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=RIGHT=")
-
-!define Rel_Association_dir(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "==>")
-!define Rel_Association_dir_Up(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=UP=>")
-!define Rel_Association_dir_Down(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=DOWN=>")
-!define Rel_Association_dir_Left(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=LEFT=>")
-!define Rel_Association_dir_Right(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=RIGHT=>")
+!define Rel_Association(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-\\")
+!define Rel_Association_Up(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-UP-\\")
+!define Rel_Association_Down(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-DOWN-\\")
+!define Rel_Association_Left(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-LEFT-\\")
+!define Rel_Association_Right(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-RIGHT-\\")
 
 !define Rel_Flow(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..>>")
 !define Rel_Flow_Up(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".UP.>>")
