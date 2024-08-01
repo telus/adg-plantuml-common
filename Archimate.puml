@@ -23,6 +23,7 @@ sprite $tArtifact jar:archimate/technology-artifact
 sprite $tNode jar:archimate/technology-node
 sprite $tInfraInterface jar:archimate/technology-infra-interface
 sprite $bActor jar:archimate/business-actor
+sprite $bProcess jar:archimate/business-process
 
 skinparam defaultFontName Arial
 skinparam titleBorderRoundCorner 15
@@ -218,7 +219,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define BusinessRole(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-role>> as e_alias [[e_link]]
 !define BusinessCollaboration(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-collaboration>> as e_alias [[e_link]]
 !define BusinessInterface(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-interface>> as e_alias [[e_link]]
-!define BusinessProcess(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-process>> as e_alias [[e_link]]
+!define BusinessProcess(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bProcess>><<business-process>> as e_alias [[e_link]]
 !define BusinessFunction(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-function>> as e_alias [[e_link]]
 !define BusinessInteraction(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-interaction>> as e_alias [[e_link]]
 !define BusinessEvent(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-event>> as e_alias [[e_link]]
