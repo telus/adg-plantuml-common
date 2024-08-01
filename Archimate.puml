@@ -202,91 +202,91 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Artifact(e_alias, e_label, e_link)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias [[e_link]] #Technology
 !define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias [[e_link]] #Technology
 !define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeWeblogic>><<technology-node-weblogic>> as e_alias [[e_link]] 
-!define Technology_Node_Repository_GitHub(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeRepositoryGitHub>><<technology-node-repository-github>> as e_alias [[e_link]] 
+!define Node_Repository_GitHub(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeRepositoryGitHub>><<technology-node-repository-github>> as e_alias [[e_link]] 
 !define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
 !define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bActor>><<business-actor>> as e_alias [[e_link]]
 
 ' UPDATING THE BELOW ELEMENTS BY REMOVING THE '_' SPACING TO ENABLE IN PLANTUML - 12/22/2023
 'Strategy Elements
-!define Resource(e_alias, e_label) archimate #STRATEGY "....\n e_label" <<strategy-resource>> as e_alias
-!define Capability(e_alias, e_label) archimate #STRATEGY "e_label" <<strategy-capability>> as e_alias
-!define CourseOfAction(e_alias, e_label) archimate #STRATEGY "e_label" <<strategy-course-of-action>> as e_alias
-!define ValueStream(e_alias, e_label) archimate #STRATEGY "e_label" <<strategy-value-stream>> as e_alias
+!define Resource(e_alias, e_label, e_link) archimate #STRATEGY "....\n e_label" <<strategy-resource>> as e_alias [[e_link]]
+!define Capability(e_alias, e_label, e_link) archimate #STRATEGY "e_label" <<strategy-capability>> as e_alias [[e_link]]
+!define CourseOfAction(e_alias, e_label, e_link) archimate #STRATEGY "e_label" <<strategy-course-of-action>> as e_alias [[e_link]]
+!define ValueStream(e_alias, e_label, e_link) archimate #STRATEGY "e_label" <<strategy-value-stream>> as e_alias [[e_link]]
 
 'Business Elements
 '!define BusinessActor(e_alias, e_label) archimate #BUSINESS "e_label" <<business-actor>> as e_alias
-!define BusinessRole(e_alias, e_label) archimate #BUSINESS "e_label" <<business-role>> as e_alias
-!define BusinessCollaboration(e_alias, e_label) archimate #BUSINESS "e_label" <<business-collaboration>> as e_alias
-!define BusinessInterface(e_alias, e_label) archimate #BUSINESS "e_label" <<business-interface>> as e_alias
-!define BusinessProcess(e_alias, e_label) archimate #BUSINESS "e_label" <<business-process>> as e_alias
-!define BusinessFunction(e_alias, e_label) archimate #BUSINESS "e_label" <<business-function>> as e_alias
-!define BusinessInteraction(e_alias, e_label) archimate #BUSINESS "e_label" <<business-interaction>> as e_alias
-!define BusinessEvent(e_alias, e_label) archimate #BUSINESS "e_label" <<business-event>> as e_alias
-!define BusinessService(e_alias, e_label) archimate #BUSINESS "e_label" <<business-service>> as e_alias
-!define BusinessObject(e_alias, e_label) archimate #BUSINESS "----\n e_label" <<business-object>> as e_alias
-!define BusinessContract(e_alias, e_label) archimate #BUSINESS "----\n e_label\n----" <<business-contract>> as e_alias
-!define BusinessRepresentation(e_alias, e_label) archimate #BUSINESS "----\n e_label" <<business-representation>> as e_alias
-!define BusinessProduct(e_alias, e_label) archimate #BUSINESS "e_label" <<business-product>> as e_alias
-!define BusinessLocation(e_alias, e_label) archimate #BUSINESS "e_label" <<business-location>> as e_alias
+!define BusinessRole(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-role>> as e_alias [[e_link]]
+!define BusinessCollaboration(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-collaboration>> as e_alias [[e_link]]
+!define BusinessInterface(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-interface>> as e_alias [[e_link]]
+!define BusinessProcess(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-process>> as e_alias [[e_link]]
+!define BusinessFunction(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-function>> as e_alias [[e_link]]
+!define BusinessInteraction(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-interaction>> as e_alias [[e_link]]
+!define BusinessEvent(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-event>> as e_alias [[e_link]]
+!define BusinessService(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-service>> as e_alias [[e_link]]
+!define BusinessObject(e_alias, e_label, e_link) archimate #BUSINESS "----\n e_label" <<business-object>> as e_alias [[e_link]]
+!define BusinessContract(e_alias, e_label, e_link) archimate #BUSINESS "----\n e_label\n----" <<business-contract>> as e_alias [[e_link]]
+!define BusinessRepresentation(e_alias, e_label, e_link) archimate #BUSINESS "----\n e_label" <<business-representation>> as e_alias [[e_link]]
+!define BusinessProduct(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-product>> as e_alias [[e_link]]
+!define BusinessLocation(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-location>> as e_alias [[e_link]]
 
 'Application Elements
 '!define ApplicationComponent(e_alias, e_label) archimate #APPLICATION "e_label" <<application-component>> as e_alias
-!define ApplicationCollaboration(e_alias, e_label) archimate #APPLICATION "e_label" <<application-collaboration>> as e_alias
+!define ApplicationCollaboration(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-collaboration>> as e_alias [[e_link]]
 '!define ApplicationInterface(e_alias, e_label) archimate #APPLICATION "e_label" <<application-interface>> as e_alias
-!define ApplicationFunction(e_alias, e_label) archimate #APPLICATION "e_label" <<application-function>> as e_alias
-!define ApplicationInteraction(e_alias, e_label) archimate #APPLICATION "e_label" <<application-interaction>> as e_alias
-!define ApplicationProcess(e_alias, e_label) archimate #APPLICATION "e_label" <<application-process>> as e_alias
-!define ApplicationEvent(e_alias, e_label) archimate #APPLICATION "e_label" <<application-event>> as e_alias
-!define ApplicationService(e_alias, e_label) archimate #APPLICATION "e_label" <<application-service>> as e_alias
+!define ApplicationFunction(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-function>> as e_alias [[e_link]]
+!define ApplicationInteraction(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-interaction>> as e_alias [[e_link]]
+!define ApplicationProcess(e_alias, e_labe, e_linkl) archimate #APPLICATION "e_label" <<application-process>> as e_alias [[e_link]]
+!define ApplicationEvent(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-event>> as e_alias [[e_link]]
+!define ApplicationService(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-service>> as e_alias [[e_link]]
 '!define ApplicationDataObject(e_alias, e_label) archimate #APPLICATION "e_label" <<application-data-object>> as e_alias
 
 'Technology Elements
 '!define Technology_Node(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-node>> as e_alias
-!define Device(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-device>> as e_alias
-!define SystemSoftware(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-system-software>> as e_alias
-!define TechnologyCollaboration(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-collaboration>> as e_alias
-!define TechnologyInterface(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-infra-interface>> as e_alias
-!define Path(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-communication-path>> as e_alias
+!define Device(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$archimate/technology-device>> as e_alias [[e_link]]
+!define SystemSoftware(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-system-software>> as e_alias [[e_link]]
+!define TechnologyCollaboration(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-collaboration>> as e_alias [[e_link]]
+!define TechnologyInterface(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-infra-interface>> as e_alias [[e_link]]
+!define Path(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-communication-path>> as e_alias [[e_link]]
 '!define Technology_CommunicationNetwork(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-network>> as e_alias
-!define TechnologyFunction(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-function>> as e_alias
-!define TechnologyProcess(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-process>> as e_alias
-!define TechnologyInteraction(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-interaction>> as e_alias
-!define TechnologyEvent(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-event>> as e_alias
-!define TechnologyService(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-infra-service>> as e_alias
+!define TechnologyFunction(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-function>> as e_alias [[e_link]]
+!define TechnologyProcess(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-process>> as e_alias [[e_link]]
+!define TechnologyInteraction(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-interaction>> as e_alias [[e_link]]
+!define TechnologyEvent(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-event>> as e_alias [[e_link]]
+!define TechnologyService(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-infra-service>> as e_alias [[e_link]]
 '!define Technology_Artifact(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-artifact>> as e_alias
-!define ArtifactModule(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-artifact-module>> as e_alias
+!define ArtifactModule(e_alias, e_label, e_link) archimate #TECHNOLOGY "e_label" <<technology-artifact-module>> as e_alias [[e_link]]
 
 'Physical Elements
-!define Equipment(e_alias, e_label) node #PHYSICAL "e_label" <<$archimate/physical-equipment>> as e_alias
-!define Facility(e_alias, e_label) node #PHYSICAL "e_label" <<$archimate/physical-facility>> as e_alias
-!define DistributionNetwork(e_alias, e_label) archimate #PHYSICAL "e_label" <<physical-distribution-network>> as e_alias
-!define Material(e_alias, e_label) archimate #PHYSICAL "----\n e_label" <<physical-material>> as e_alias
+!define Equipment(e_alias, e_label, e_link) node #PHYSICAL "e_label" <<$archimate/physical-equipment>> as e_alias [[e_link]]
+!define Facility(e_alias, e_label, e_link) node #PHYSICAL "e_label" <<$archimate/physical-facility>> as e_alias [[e_link]]
+!define DistributionNetwork(e_alias, e_label, e_link) archimate #PHYSICAL "e_label" <<physical-distribution-network>> as e_alias [[e_link]]
+!define Material(e_alias, e_label, e_link) archimate #PHYSICAL "----\n e_label" <<physical-material>> as e_alias [[e_link]]
 
 'Motivation Elements
-!define Stakeholder(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-stakeholder>> as e_alias
-!define Driver(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-driver>> as e_alias
-!define Assessment(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-assessment>> as e_alias
-!define Goal(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-goal>> as e_alias
-!define Outcome(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-outcome>> as e_alias
-!define Principle(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-principle>> as e_alias
-!define Requirement(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-requirement>> as e_alias
-!define Constraint(e_alias, e_label) archimate #MOTIVATION "e_label" <<motivation-constraint>> as e_alias
-!define Meaning(e_alias, e_label) cloud #MOTIVATION "e_label" <<$archimate/motivation-meaning>> as e_alias
-!define Value(e_alias, e_label) usecase #MOTIVATION "e_label" as e_alias
+!define Stakeholder(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-stakeholder>> as e_alias [[e_link]]
+!define Driver(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-driver>> as e_alias [[e_link]]
+!define Assessment(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-assessment>> as e_alias [[e_link]]
+!define Goal(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-goal>> as e_alias [[e_link]]
+!define Outcome(e_alias, e_labe, e_linkl) archimate #MOTIVATION "e_label" <<motivation-outcome>> as e_alias [[e_link]]
+!define Principle(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-principle>> as e_alias [[e_link]]
+!define Requirement(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-requirement>> as e_alias [[e_link]]
+!define Constraint(e_alias, e_label, e_link) archimate #MOTIVATION "e_label" <<motivation-constraint>> as e_alias [[e_link]]
+!define Meaning(e_alias, e_label, e_link) cloud #MOTIVATION "e_label" <<$archimate/motivation-meaning>> as e_alias [[e_link]]
+!define Value(e_alias, e_label, e_link) usecase #MOTIVATION "e_label" as e_alias [[e_link]]
 
 'Implementation Elements
-!define WorkPackage(e_alias, e_label) archimate #IMPLEMENTATION "e_label" <<implementation-workpackage>> as e_alias
-!define Deliverable(e_alias, e_label) archimate #IMPLEMENTATION "----\n e_label" <<implementation-deliverable>> as e_alias
-!define ImplementationEvent(e_alias, e_label) archimate #IMPLEMENTATION "e_label" <<implementation-event>> as e_alias
-!define Plateau(e_alias, e_label) node #PHYSICAL "e_label" <<$archimate/implementation-plateau>> as e_alias
-!define Gap(e_alias, e_label) archimate #PHYSICAL "----\n e_label" <<implementation-gap>> as e_alias
+!define WorkPackage(e_alias, e_label, e_link) archimate #IMPLEMENTATION "e_label" <<implementation-workpackage>> as e_alias [[e_link]]
+!define Deliverable(e_alias, e_label, e_link) archimate #IMPLEMENTATION "----\n e_label" <<implementation-deliverable>> as e_alias [[e_link]]
+!define ImplementationEvent(e_alias, e_label, e_link) archimate #IMPLEMENTATION "e_label" <<implementation-event>> as e_alias [[e_link]]
+!define Plateau(e_alias, e_label, e_link) node #PHYSICAL "e_label" <<$archimate/implementation-plateau>> as e_alias [[e_link]]
+!define Gap(e_alias, e_label, e_link) archimate #PHYSICAL "----\n e_label" <<implementation-gap>> as e_alias [[e_link]]
 
 'Other Elements
-!define Other_Location(e_alias, e_label) archimate #ffb973 "e_label" <<location>> as e_alias
-!define Junction_Or(e_alias, e_label) circle #whitesmoke "e_label" as e_alias
-!define Junction_And(e_alias, e_label) circle #black "e_label" as e_alias
-!define Grouping(e_alias, e_label) Folder "e_label" <<grouping>> as e_alias
-!define Group(e_alias, e_label) Folder "e_label" <<group>> as e_alias
+!define Other_Location(e_alias, e_label, e_link) archimate #ffb973 "e_label" <<location>> as e_alias [[e_link]]
+!define Junction_Or(e_alias, e_label, e_link) circle #whitesmoke "e_label" as e_alias [[e_link]]
+!define Junction_And(e_alias, e_label, e_link) circle #black "e_label" as e_alias [[e_link]]
+!define Grouping(e_alias, e_label, e_link) Folder "e_label" <<grouping>> as e_alias [[e_link]]
+!define Group(e_alias, e_label, e_link) Folder "e_label" <<group>> as e_alias [[e_link]]
 
 ' Custom (Derived) Relationships
 ' Dervived Relationships will have a lighter line and text colour [#eee]
