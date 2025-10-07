@@ -20,6 +20,7 @@ sprite $aDataObject jar:archimate/application-data-object
 sprite $aInterface jar:archimate/application-interface
 sprite $tNetwork jar:archimate/technology-network
 sprite $tArtifact jar:archimate/technology-artifact
+sprite $tRepository jar:archimate/technology-node
 sprite $tNode jar:archimate/technology-node
 sprite $tInfraInterface jar:archimate/technology-infra-interface
 sprite $bActor jar:archimate/business-actor
@@ -142,6 +143,15 @@ skinparam rectangle<<application-system>> {
     'HyperlinkUnderline true
   }
 
+skinparam rectangle<<code-repository>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    FontColor blue
+    'BorderColor red
+    'HyperlinkUnderline true
+  }
+
 skinparam rectangle<<application-module>> {
     'FontSize 20
     'FontName FONTSERIF
@@ -204,6 +214,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias [[e_link]] #Technology
 !define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeWeblogic>><<technology-node-weblogic>> as e_alias [[e_link]] 
 !define Node_Repository_GitHub(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeRepositoryGitHub>><<technology-node-repository-github>> as e_alias [[e_link]] 
+!define CodeRepository(e_alias, e_label, e_link) rectangle "e_label" <<$tRepository>><<code-repository>> as e_alias [[e_link]]
 !define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
 !define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bActor>><<business-actor>> as e_alias [[e_link]]
 
