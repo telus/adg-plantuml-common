@@ -19,11 +19,11 @@ sprite $aComponent jar:archimate/application-component
 sprite $aDataObject jar:archimate/application-data-object
 sprite $aInterface jar:archimate/application-interface
 sprite $aService jar:archimate/application-service
-'sprite $tNetwork jar:archimate/technology-network
+sprite $tNetwork jar:archimate/technology-communication-network
 sprite $tArtifact jar:archimate/technology-artifact
 sprite $tRepository jar:archimate/technology-node
 sprite $tNode jar:archimate/technology-node
-'sprite $tInfraInterface jar:archimate/technology-infra-interface
+sprite $tInfraInterface jar:archimate/technology-interface
 sprite $bActor jar:archimate/business-actor
 sprite $bProcess jar:archimate/business-process
 
