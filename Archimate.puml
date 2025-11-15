@@ -18,11 +18,12 @@ left to right direction
 sprite $aComponent jar:archimate/application-component
 sprite $aDataObject jar:archimate/application-data-object
 sprite $aInterface jar:archimate/application-interface
-sprite $tNetwork jar:archimate/technology-network
+sprite $aService jar:archimate/application-service
+'sprite $tNetwork jar:archimate/technology-network
 sprite $tArtifact jar:archimate/technology-artifact
 sprite $tRepository jar:archimate/technology-node
 sprite $tNode jar:archimate/technology-node
-sprite $tInfraInterface jar:archimate/technology-infra-interface
+'sprite $tInfraInterface jar:archimate/technology-infra-interface
 sprite $bActor jar:archimate/business-actor
 sprite $bProcess jar:archimate/business-process
 
@@ -67,12 +68,11 @@ skinparam Arrow {
     FontColor #000000
     FontSize 12
 }
-skinparam Folder<<grouping>> {
-    Shadowing true
+skinparam rectangle<<grouping>> {
+    roundCorner 25
     StereotypeFontSize 0
-    FontColor #444444
+    FontColor #000000
     BorderColor #444444
-    BorderStyle dashed
 }
 skinparam Folder<<group>> {
     Shadowing true
@@ -134,6 +134,10 @@ skinparam usecase {
 
 ' Custom ArchiMate Extensions
 ' ##################################
+skinparam rectangle<<application-service>> {
+    roundCorner 25
+  }
+
 skinparam rectangle<<application-system>> {
     'FontSize 20
     'FontName FONTSERIF
@@ -147,7 +151,7 @@ skinparam rectangle<<code-repository>> {
     'FontSize 20
     'FontName FONTSERIF
     'FontStyle plain
-    FontColor blue
+    FontColor black
     'BorderColor red
     'HyperlinkUnderline true
   }
@@ -214,7 +218,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias [[e_link]] #Technology
 !define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeWeblogic>><<technology-node-weblogic>> as e_alias [[e_link]] 
 !define Node_Repository_GitHub(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$tNodeRepositoryGitHub>><<technology-node-repository-github>> as e_alias [[e_link]] 
-!define CodeRepository(e_alias, e_label, e_link) rectangle "e_label" <<$tRepository>><<code-repository>> as e_alias [[e_link]]
+!define CodeRepository(e_alias, e_label, e_link) rectangle "e_label" <<$tArtifact>><<code-repository>> as e_alias [[e_link]] #lightgreen
 !define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
 !define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bActor>><<business-actor>> as e_alias [[e_link]]
 
@@ -249,7 +253,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define ApplicationInteraction(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-interaction>> as e_alias [[e_link]]
 !define ApplicationProcess(e_alias, e_labe, e_linkl) archimate #APPLICATION "e_label" <<application-process>> as e_alias [[e_link]]
 !define ApplicationEvent(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-event>> as e_alias [[e_link]]
-!define ApplicationService(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-service>> as e_alias [[e_link]]
+!define ApplicationService(e_alias, e_label, e_link) rectangle "e_label" <<$aService>><<application-service>> as e_alias [[e_link]] #lightgrey
 '!define ApplicationDataObject(e_alias, e_label) archimate #APPLICATION "e_label" <<application-data-object>> as e_alias
 
 'Technology Elements
@@ -297,7 +301,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Other_Location(e_alias, e_label, e_link) archimate #ffb973 "e_label" <<location>> as e_alias [[e_link]]
 !define Junction_Or(e_alias, e_label, e_link) circle #whitesmoke "e_label" as e_alias [[e_link]]
 !define Junction_And(e_alias, e_label, e_link) circle #black "e_label" as e_alias [[e_link]]
-!define Grouping(e_alias, e_label, e_link) Folder "e_label" <<grouping>> as e_alias [[e_link]]
+!define Grouping(e_alias, e_label, e_link) rectangle "e_label" <<$aService>><<grouping>> as e_alias [[e_link]] #lightgrey
 !define Group(e_alias, e_label, e_link) Folder "e_label" <<group>> as e_alias [[e_link]]
 
 ' Custom (Derived) Relationships
